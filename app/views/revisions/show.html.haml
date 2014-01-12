@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b Hash code:
+  = @revision.hash_code
+%p
+  %b Url:
+  = @revision.url
+%p
+  %b Log:
+  = @revision.log
+
+= link_to 'Edit', edit_revision_path(@revision)
+\|
+= link_to 'Back', revisions_path

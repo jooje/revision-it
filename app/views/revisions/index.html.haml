@@ -1,0 +1,23 @@
+%h1 Listing revisions
+
+%table
+  %tr
+    %th Hash code
+    %th Url
+    %th Log
+    %th
+    %th
+    %th
+
+  - @revisions.each do |revision|
+    %tr
+      %td= revision.hash_code
+      %td= revision.url
+      %td= revision.log
+      %td= link_to 'Show', revision
+      %td= link_to 'Edit', edit_revision_path(revision)
+      %td= link_to 'Destroy', revision, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Revision', new_revision_path

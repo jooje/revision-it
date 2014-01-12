@@ -26,27 +26,19 @@
             %span.icon-bar
             %span.icon-bar
             %span.icon-bar
-          %a.brand(href="#") RevisionIt
+          %a.brand(href='/') RevisionIt
           .container.nav-collapse
             %ul.nav
-              %li= link_to "Link 1", "/path1"
-              %li= link_to "Link 2", "/path2"
-              %li= link_to "Link 3", "/path3"
+              %li= link_to "Projects", "/path1"
+              %li= link_to "Revisions", revisions_path
+              %li= link_to "About", "/path3"
 
     .container
 
       .row
-        .span9
+        .span12
           = bootstrap_flash
           = yield
-        .span3
-          .well.sidebar-nav
-            %h3 Sidebar
-            %ul.nav.nav-list
-              %li.nav-header Sidebar
-              %li= link_to "Link 1", "/path1"
-              %li= link_to "Link 2", "/path2"
-              %li= link_to "Link 3", "/path3"
-    
+
       %footer
-        %p &copy; Company 2014
+        %p &copy; <a href="http://codefirst.org">Codefirst</a> 2014

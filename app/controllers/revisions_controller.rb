@@ -61,7 +61,30 @@ class RevisionsController < ApplicationController
     end
   end
 
+  def via_hash
+    if params[:hash].size < 4 then
+      error 'ambiguous hash', 400
+    else
+      @revision = Revision.from_hash(params[:hash])
+      if @revision then
+        respond_to do |format|
+          format.html { render 'embed', layout: false }
+          format.json { render json: { status: 'ok', revision: @revision } }
+        end
+      else
+        error 'No such revision', 404
+      end
+    end
+  end
+
   private
+  def error(text, status)
+    respond_to do |format|
+      format.html { render text: text, status: status }
+      format.json { render json: { status: 'error', reason: text }}
+    end
+  end
+
     # Use callbacks to share common setup or constraints between actions.
     def set_revision
       @revision = Revision.find(params[:id])

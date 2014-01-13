@@ -1,5 +1,6 @@
 RevisionIt::Application.routes.draw do
   resources :revisions
+  get 'hash/:hash' => 'revisions#via_hash'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

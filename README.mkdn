@@ -9,6 +9,13 @@ How to run
 -----------------------------------------
 TBD
 
+How to deploy on Heroku
+-----------------------------------------
+
+    $ heroku create
+    $ git push heroku master
+    $ heroku run "rake db:migrate"
+
 Authors
 -----------------------------------------
 

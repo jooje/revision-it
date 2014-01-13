@@ -1,6 +1,7 @@
 RevisionIt::Application.routes.draw do
-  get "github/import_all"
+  post "github/import_all" => 'github#import_all', as: 'import'
   get "github/hook"
+  get "github/" => 'github#index', as: 'github'
   resources :revisions
   get 'hash/:hash' => 'revisions#via_hash'
 

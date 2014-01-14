@@ -8,3 +8,8 @@ RevisionIt provides APIs to obtain a URL of some repository viewer(e.g. Github) 
 How to run
 -----------------------------------------
 TBD
+
+Authors
+-----------------------------------------
+
+ @mzp

@@ -1,0 +1,5 @@
+%h2 Import revisions from github
+= form_tag(import_path, method: "post") do
+  .input-append
+    %input.span4(type="text" placeholder="(e.g. http://github.com/codefirst/revision-it)" name="url")
+    %button.btn Import

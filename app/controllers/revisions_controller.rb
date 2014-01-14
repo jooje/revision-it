@@ -1,4 +1,5 @@
 class RevisionsController < ApplicationController
+  include ErrorHandle
   before_action :set_revision, only: [:show, :edit, :update, :destroy]
 
   # GET /revisions
@@ -78,13 +79,6 @@ class RevisionsController < ApplicationController
   end
 
   private
-  def error(text, status)
-    respond_to do |format|
-      format.html { render text: text, status: status }
-      format.json { render json: { status: 'error', reason: text }}
-    end
-  end
-
     # Use callbacks to share common setup or constraints between actions.
     def set_revision
       @revision = Revision.find(params[:id])

@@ -3,6 +3,10 @@ services:
     - wercker/postgresql
 build:
     steps:
+      - script:
+          name: clean cache
+          code: |
+              sudo rm -rf /cache/bundle-install
       - bundle-install
       - rails-database-yml:
           service: postgresql

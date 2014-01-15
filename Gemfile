@@ -7,7 +7,7 @@ gem 'rails', '4.0.2'
 gem "github_api"
 
 # Use bootstrap
-# gem 'less-rails'
+gem 'less-rails'
 gem 'twitter-bootstrap-rails'
 
 # Use HAML for html

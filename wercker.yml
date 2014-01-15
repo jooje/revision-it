@@ -1,10 +1,9 @@
 box: wercker/ubuntu12.04-ruby2.0.0
 services:
-    - wercker/postgresql
+    - wercker/ruby
 build:
     steps:
       - bundle-install
-      - rails-database-yml
       - script:
           name: echo ruby information
           code: |

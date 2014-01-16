@@ -21,4 +21,6 @@ How to deploy on Heroku
 Authors
 -----------------------------------------
 
- @mzp
+ * @mzp
+ * @mallowlabs
+

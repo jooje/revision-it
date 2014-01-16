@@ -20,10 +20,8 @@ build:
           name: Run RSpec
           code: bundle exec rake spec
     after-steps:
-      - script:
-          name: hooktest
-          code: |
-            echo hi
+      - mzp/http-notify:
+          url: $DASHBOZU_URL
 deploy:
     steps:
         - heroku-deploy

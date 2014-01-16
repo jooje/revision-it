@@ -19,6 +19,9 @@ build:
       - script:
           name: Run RSpec
           code: bundle exec rake spec
+    after-steps:
+      - mzp/http-notify:
+          url: $DASHBOZU_URL
 deploy:
     steps:
         - heroku-deploy
